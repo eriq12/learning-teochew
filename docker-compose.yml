@@ -1,0 +1,11 @@
+services:
+  learning-teochew:
+    container_name: learning-teochew
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - ./:/usr/src/app
+    command: make sandbox
+    ports:
+      - "3000:3000"
